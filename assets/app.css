@@ -1,0 +1,84 @@
+:root {
+  --color-black: #000;
+  --main-font-family: "Montserrat";
+  --main-bg-color: #fff;
+  --main-txt-color: #5b616b;
+  --main-border-color: #000;
+  --main-result-color: rgb(0, 201, 201);
+  --main-result-color-lighter: rgb(0, 226, 226);
+  --main-padding: 0.5em;
+  --main-margin: 0.5em;
+  --main-border-radius: 5px;
+}
+
+body {
+  font-family: var(--main-font-family), sans-serif;
+}
+
+header h1 {
+  position: relative;
+  max-width: 500px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-bg-color);
+  color: var(--main-txt-color);
+  padding: var(--main-padding);
+  margin: var(--main-margin);
+}
+
+.card {
+  border: 1px solid var(--main-txt-color);
+  border-radius: var(--main-border-radius);
+  padding: 15px;
+  margin: 0 0 20px 0;
+  max-width: 500px;
+  width: 100%;
+}
+.card .head {
+  margin: 0 0 10px 0;
+}
+
+#result .body div {
+  margin-bottom: 5px;
+}
+
+.equilibrium span {
+  font-weight: 500;
+}
+
+canvas {
+  max-width: 600px;
+  max-height: 600px;
+  margin-bottom: 50px;
+}
+
+.dg .pulse {
+  position: absolute;
+  animation: pulse 4s infinite forwards;
+  border-radius: 0 0 0 5px;
+  -webkit-transition: opacity 0.1s linear;
+  -o-transition: opacity 0.1s linear;
+  -moz-transition: opacity 0.1s linear;
+  transition: opacity 0.1s linear;
+  border: 0;
+  line-height: 19px;
+  height: 20px;
+  cursor: pointer;
+  text-align: center;
+  background-color: var(--main-result-color);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 201, 201, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 5px 20px rgba(0, 201, 201, 0);
+  }
+}
